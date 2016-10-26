@@ -49,6 +49,7 @@ By default, service is running by default on the port `8040`, on the url `http:/
         "requestVersion": "1.0",
         "iwxxmData": "<content of validates IWXXM XML message>"
     }
+  }
 }
 ```
 
@@ -110,13 +111,23 @@ Example of batch request:
     "jsonrpc": "2.0",
     "id": "iwxxm1",
     "method": "validate",
-    "params": { ... }
+    "params": { 
+      "request": {
+        "requestVersion": "1.0",
+        "iwxxmData": "<content of validates IWXXM XML message>"
+      }
+    }
   },
   {
     "jsonrpc": "2.0",
     "id": "iwxxm2",
     "method": "validate",
-    "params": { ... }
+    "params": { 
+      "request": {
+        "requestVersion": "1.0",
+        "iwxxmData": "<content of validates IWXXM XML message>"
+      }
+    }
   }
 ]
 ```
@@ -127,12 +138,18 @@ Example of batch response:
   {
     "jsonrpc": "2.0",
     "id": "iwxxm1",
-    "result": { ... }
+    "result": {
+      "responseVersion": "1.0",
+      "valid": true
+    }
   },
   {
     "jsonrpc": "2.0",
     "id": "iwxxm2",
-    "result": { ... }
+    "result": {
+      "responseVersion": "1.0",
+      "valid": true
+    }
   }
 ]
 ```

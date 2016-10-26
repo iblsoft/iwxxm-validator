@@ -2,9 +2,19 @@ IWXXM Validation Web Service
 ============================
 
 IWXXM Validation Web Service is a JSON-RPC 2.0 web service which allows to validate 
-IWXXM messages against XSD schemas and Schematron rules stored in the local application cache.
+IWXXM data against XSD schemas and Schematron rules stored in the local filesystem with XML catalogue.
+The validation code originated from [NCAR CRUX](https://github.com/NCAR/crux). 
 
-It is possible to run application as json-rpc web service or as a command line tool to validate provided files.
+You can run the application as JSON-RPC web service or as a command line tool to validate provided files.
+
+There is a **demo web site** which uses this validator running on <https://iwxxm.iblsoft.com/iwxxm>.
+At the moment the site is protected with a login/password, to request access please write an e-mail
+to [iwxxm-support@iblsoft.com](mailto:iwxxm-support@iblsoft.com). We are open to cooperation with other
+organisations and companies working on IWXXM implementation to increase interoperability across packages
+coming from different vendors. The features of the demo site are: 
+1. Validation with IWXXM 2.0, 2.0-RC1, 1.1, 1.0 schemas
+1. Conversion from TAC METAR, SPECI, SIGMET, AIRMET, VA Advisory to IWXXM 2.0 and 1.1
+1. Conversion back from IWXXM to TAC (with some limitations)
 
 Requirements
 ------------
@@ -173,7 +183,7 @@ Updating XML Schema catalog
 To prevent download of XSD schemas from the network, XML Schema catalog is stored 
 on the local disk in the directory `config/schemas`. Content of XML schema catalog 
 (together with schematron rules) is extracted from ZIP file downloaded from 
-[http://schemas.wmo.int/iwxxm/2.0/zip/iwxxm-schema-bundle-2.0.zip].
+<http://schemas.wmo.int/iwxxm/2.0/zip/iwxxm-schema-bundle-2.0.zip>.
 
 Configuration of web service
 ----------------------------

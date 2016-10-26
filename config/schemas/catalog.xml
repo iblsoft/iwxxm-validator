@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE catalog PUBLIC "-//OASIS//DTD Entity Resolution XML Catalog V1.0//EN" "http://www.oasis-open.org/committees/entity/release/1.0/catalog.dtd">
+
+<!--
+Local directories are organized by schema location, NOT namespace.  For example, IWXXM schemas are under
+int/wmo/iwxxm because the "live" schemas are hosted from schemas.wmo.int/iwxxm/
+-->
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+
+  <!-- W3C -->
+  <rewriteSystem systemIdStartString="http://www.w3.org" rewritePrefix="schema/org/w3c/"/>
+
+  <!-- OGC and ISO schemas on schemas.opengis.net -->
+  <rewriteSystem systemIdStartString="http://schemas.opengis.net" rewritePrefix="schema/net/opengis"/>
+
+  <!-- WMO/ICAO -->
+  <rewriteSystem systemIdStartString="http://schemas.wmo.int" rewritePrefix="schema/int/wmo"/>
+
+  <!-- AIXM -->
+  <rewriteSystem systemIdStartString="http://www.aixm.aero/schema" rewritePrefix="schema/aero/aixm/"/>
+  <rewriteSystem systemIdStartString="http://www.aixm.aero/gallery/content/public/schema" rewritePrefix="schema/aero/aixm/"/>
+
+</catalog>

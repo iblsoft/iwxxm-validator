@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iwxxm:SIGMET xmlns:iwxxm="http://icao.int/iwxxm/2.0" xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns:metce="http://def.wmo.int/metce/2013" xmlns:om="http://www.opengis.net/om/2.0" xmlns:sf="http://www.opengis.net/sampling/2.0" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://icao.int/iwxxm/2.0 http://schemas.wmo.int/iwxxm/2.0/iwxxm.xsd http://www.aixm.aero/schema/5.1.1 http://www.aixm.aero/schema/5.1.1_profiles/AIXM_WX/5.1.1a/AIXM_Features.xsd http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.2/metce.xsd http://www.opengis.net/om/2.0 http://schemas.opengis.net/om/2.0/observation.xsd http://www.opengis.net/sampling/2.0 http://schemas.opengis.net/sampling/2.0/samplingFeature.xsd http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd" gml:id="sigmet-LZBB-20160922102800Z" status="NORMAL" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <iwxxm:issuingAirTrafficServicesUnit>
+  <aixm:Unit gml:id="uuid.02610b02-80ae-11e6-a27e-2c768a529470">
+   <aixm:timeSlice>
+    <aixm:UnitTimeSlice gml:id="uuid.026110de-80ae-11e6-a27e-2c768a529470">
+     <gml:validTime/>
+     <aixm:interpretation>BASELINE</aixm:interpretation>
+     <aixm:name>FIC</aixm:name>
+     <aixm:type>FIC</aixm:type>
+     <aixm:designator>LZBB</aixm:designator>
+    </aixm:UnitTimeSlice>
+   </aixm:timeSlice>
+  </aixm:Unit>
+ </iwxxm:issuingAirTrafficServicesUnit>
+ <iwxxm:originatingMeteorologicalWatchOffice>
+  <aixm:Unit gml:id="uuid.02611afc-80ae-11e6-a27e-2c768a529470">
+   <aixm:timeSlice>
+    <aixm:UnitTimeSlice gml:id="uuid.02611ee4-80ae-11e6-a27e-2c768a529470">
+     <gml:validTime/>
+     <aixm:interpretation>BASELINE</aixm:interpretation>
+     <aixm:name>MWO</aixm:name>
+     <aixm:type>MWO</aixm:type>
+     <aixm:designator>LZBB</aixm:designator>
+    </aixm:UnitTimeSlice>
+   </aixm:timeSlice>
+  </aixm:Unit>
+ </iwxxm:originatingMeteorologicalWatchOffice>
+ <iwxxm:sequenceNumber>A01</iwxxm:sequenceNumber>
+ <iwxxm:validPeriod>
+  <gml:TimePeriod gml:id="tp-221028Z-221428Z">
+   <gml:beginPosition>2016-09-22T10:28:00</gml:beginPosition>
+   <gml:endPosition>2016-09-22T14:28:00</gml:endPosition>
+  </gml:TimePeriod>
+ </iwxxm:validPeriod>
+ <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/SigWxPhenomena/OBSC_TS" xlink:title="Obscured thunderstorm"/>
+ <iwxxm:analysis>
+  <om:OM_Observation gml:id="analysis-20160922102800Z">
+   <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/SIGMETEvolvingConditionAnalysis" xlink:title="SIGMET Evolving Condition Analysis"/>
+   <om:phenomenonTime nilReason="missing"/>
+   <om:resultTime>
+    <gml:TimeInstant gml:id="ti-20160922102800Z">
+     <gml:timePosition>2016-09-22T10:28:00</gml:timePosition>
+    </gml:TimeInstant>
+   </om:resultTime>
+   <om:validTime xlink:href="#tp-221028Z-221428Z"/>
+   <om:procedure>
+    <metce:Process gml:id="p-49-2-sigmet">
+     <gml:description>WMO No. 49 Volume 2 Meteorological Service for International Air Navigation [C.3.1.]7 SIGMET AND AIRMET INFORMATION, AERODROME WARNINGS AND WIND SHEAR WARNINGS AND ALERTS</gml:description>
+    </metce:Process>
+   </om:procedure>
+   <om:observedProperty xlink:href="http://codes.wmo.int/49-2/SigWxPhenomena/OBSC_TS" xlink:title="Obscured thunderstorm"/>
+   <om:featureOfInterest>
+    <sams:SF_SpatialSamplingFeature gml:id="sampling-surface">
+     <sf:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingSurface" xlink:title="SF Sampling Surface"/>
+     <sf:sampledFeature>
+      <aixm:Airspace gml:id="uuid.026134c4-80ae-11e6-a27e-2c768a529470">
+       <aixm:timeSlice>
+        <aixm:AirspaceTimeSlice gml:id="LZBB-airspace-ts">
+         <gml:validTime/>
+         <aixm:interpretation>BASELINE</aixm:interpretation>
+         <aixm:type>FIR</aixm:type>
+         <aixm:designator>LZBB</aixm:designator>
+         <aixm:name>BRATISLAVA</aixm:name>
+        </aixm:AirspaceTimeSlice>
+       </aixm:timeSlice>
+      </aixm:Airspace>
+     </sf:sampledFeature>
+     <sams:shape nilReason="withheld"/>
+    </sams:SF_SpatialSamplingFeature>
+   </om:featureOfInterest>
+   <om:result>
+    <iwxxm:EvolvingMeteorologicalCondition gml:id="analysis-OBS" intensityChange="NO_CHANGE" timeIndicator="OBSERVATION">
+     <iwxxm:directionOfMotion nilReason="inapplicable"/>
+     <iwxxm:geometry>
+      <aixm:AirspaceVolume gml:id="analysis-OBS-volume-0">
+       <aixm:upperLimit uom="FL">630</aixm:upperLimit>
+       <aixm:upperLimitReference>STD</aixm:upperLimitReference>
+       <aixm:horizontalProjection>
+        <aixm:Surface gml:id="analysis-OBS-surface-0" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+         <gml:polygonPatches>
+          <gml:PolygonPatch>
+           <gml:exterior>
+            <gml:LinearRing>
+             <gml:posList>49.23 18.62 48.28 18.13 48.65 19.15</gml:posList>
+            </gml:LinearRing>
+           </gml:exterior>
+          </gml:PolygonPatch>
+         </gml:polygonPatches>
+        </aixm:Surface>
+       </aixm:horizontalProjection>
+      </aixm:AirspaceVolume>
+     </iwxxm:geometry>
+     <iwxxm:speedOfMotion uom="[kn_i]">0</iwxxm:speedOfMotion>
+    </iwxxm:EvolvingMeteorologicalCondition>
+   </om:result>
+  </om:OM_Observation>
+ </iwxxm:analysis>
+</iwxxm:SIGMET>

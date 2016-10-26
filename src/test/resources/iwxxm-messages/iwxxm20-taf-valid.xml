@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iwxxm:TAF xmlns:iwxxm="http://icao.int/iwxxm/2.0" xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns:metce="http://def.wmo.int/metce/2013" xmlns:om="http://www.opengis.net/om/2.0" xmlns:sf="http://www.opengis.net/sampling/2.0" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://icao.int/iwxxm/2.0 http://schemas.wmo.int/iwxxm/2.0/iwxxm.xsd http://www.aixm.aero/schema/5.1.1 http://www.aixm.aero/schema/5.1.1_profiles/AIXM_WX/5.1.1a/AIXM_Features.xsd http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.2/metce.xsd http://www.opengis.net/om/2.0 http://schemas.opengis.net/om/2.0/observation.xsd http://www.opengis.net/sampling/2.0 http://schemas.opengis.net/sampling/2.0/samplingFeature.xsd http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd" gml:id="taf-LZIB-20161010105800Z" permissibleUsage="OPERATIONAL" status="NORMAL" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <iwxxm:issueTime>
+    <gml:TimeInstant gml:id="ti-LZIB-20161010105800Z">
+      <gml:timePosition>2016-10-10T10:58:00Z</gml:timePosition>
+    </gml:TimeInstant>
+  </iwxxm:issueTime>
+  <iwxxm:validTime>
+    <gml:TimePeriod gml:id="tp-LZIB-101200Z-111200Z">
+      <gml:beginPosition>2016-10-10T12:00:00Z</gml:beginPosition>
+      <gml:endPosition>2016-10-11T12:00:00Z</gml:endPosition>
+    </gml:TimePeriod>
+  </iwxxm:validTime>
+  <iwxxm:baseForecast>
+    <om:OM_Observation gml:id="bf-LZIB">
+      <om:type xlink:href="http://codes.wmo.int/49-2/observation/type/IWXXM/1.0/MeteorologicalAerodromeForecast" xlink:title="Aerodrome Forecast"/>
+      <om:phenomenonTime>
+        <gml:TimePeriod gml:id="tp-0-LZIB-101200Z-111200Z">
+          <gml:beginPosition>2016-10-10T12:00:00Z</gml:beginPosition>
+          <gml:endPosition>2016-10-11T12:00:00Z</gml:endPosition>
+        </gml:TimePeriod>
+      </om:phenomenonTime>
+      <om:resultTime xlink:href="#ti-LZIB-20161010105800Z"/>
+      <om:validTime xlink:href="#tp-LZIB-101200Z-111200Z"/>
+      <om:procedure>
+        <metce:Process gml:id="p-49-2-taf-LZIB">
+          <gml:description>WMO No. 49 Volume 2 Meteorological Service for International Air Navigation APPENDIX 5 TECHNICAL SPECIFICATIONS RELATED TO FORECASTS</gml:description>
+        </metce:Process>
+      </om:procedure>
+      <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/MeteorologicalAerodromeForecast" xlink:title="TAF forecast properties"/>
+      <om:featureOfInterest>
+        <sams:SF_SpatialSamplingFeature gml:id="sp-LZIB">
+          <sf:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint"/>
+          <sf:sampledFeature>
+            <aixm:AirportHeliport gml:id="uuid.61b4d6f4-95d2-11e6-b854-6e9b7e00d87a">
+              <aixm:timeSlice>
+                <aixm:AirportHeliportTimeSlice gml:id="uuid.61b4db2c-95d2-11e6-b854-6e9b7e00d87a">
+                  <gml:validTime/>
+                  <aixm:interpretation>BASELINE</aixm:interpretation>
+                  <aixm:designator>LZIB</aixm:designator>
+                  <aixm:name>BRATISLAVA LETISKO</aixm:name>
+                  <aixm:locationIndicatorICAO>LZIB</aixm:locationIndicatorICAO>
+                </aixm:AirportHeliportTimeSlice>
+              </aixm:timeSlice>
+            </aixm:AirportHeliport>
+          </sf:sampledFeature>
+          <sams:shape>
+            <gml:Point gml:id="obs-point-LZIB" uomLabels="deg deg m" axisLabels="Lat Lon Altitude" srsDimension="3" srsName="http://www.opengis.net/def/crs/EPSG/0/4979">
+              <gml:pos>48.17 17.21 133</gml:pos>
+            </gml:Point>
+          </sams:shape>
+        </sams:SF_SpatialSamplingFeature>
+      </om:featureOfInterest>
+      <om:result>
+        <iwxxm:MeteorologicalAerodromeForecastRecord cloudAndVisibilityOK="false" gml:id="base-record-0-LZIB-20161010105800Z">
+          <iwxxm:prevailingVisibility uom="m">9999</iwxxm:prevailingVisibility>
+          <iwxxm:surfaceWind>
+            <iwxxm:AerodromeSurfaceWindForecast variableWindDirection="false">
+              <iwxxm:meanWindDirection uom="deg">240</iwxxm:meanWindDirection>
+              <iwxxm:meanWindSpeed uom="[kn_i]">15</iwxxm:meanWindSpeed>
+            </iwxxm:AerodromeSurfaceWindForecast>
+          </iwxxm:surfaceWind>
+          <iwxxm:weather xlink:href="http://codes.wmo.int/306/4678/-SHRA"/>
+          <iwxxm:cloud>
+            <iwxxm:AerodromeCloudForecast gml:id="acf-0-LZIB">
+              <iwxxm:layer>
+                <iwxxm:CloudLayer>
+                  <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/1"/>
+                  <iwxxm:base uom="[ft_i]">1800</iwxxm:base>
+                </iwxxm:CloudLayer>
+              </iwxxm:layer>
+              <iwxxm:layer>
+                <iwxxm:CloudLayer>
+                  <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/3"/>
+                  <iwxxm:base uom="[ft_i]">2800</iwxxm:base>
+                </iwxxm:CloudLayer>
+              </iwxxm:layer>
+            </iwxxm:AerodromeCloudForecast>
+          </iwxxm:cloud>
+          <iwxxm:temperature>
+            <iwxxm:AerodromeAirTemperatureForecast>
+              <iwxxm:maximumAirTemperature uom="Cel">10</iwxxm:maximumAirTemperature>
+              <iwxxm:maximumAirTemperatureTime>
+                <gml:TimeInstant gml:id="maxt-LZIB-20161011120000Z">
+                  <gml:timePosition>2016-10-11T12:00:00Z</gml:timePosition>
+                </gml:TimeInstant>
+              </iwxxm:maximumAirTemperatureTime>
+              <iwxxm:minimumAirTemperature uom="Cel">5</iwxxm:minimumAirTemperature>
+              <iwxxm:minimumAirTemperatureTime>
+                <gml:TimeInstant gml:id="mint-LZIB-20161011000000Z">
+                  <gml:timePosition>2016-10-11T00:00:00Z</gml:timePosition>
+                </gml:TimeInstant>
+              </iwxxm:minimumAirTemperatureTime>
+            </iwxxm:AerodromeAirTemperatureForecast>
+          </iwxxm:temperature>
+        </iwxxm:MeteorologicalAerodromeForecastRecord>
+      </om:result>
+    </om:OM_Observation>
+  </iwxxm:baseForecast>
+  <iwxxm:changeForecast>
+    <om:OM_Observation gml:id="cf-1-LZIB">
+      <om:type xlink:href="http://codes.wmo.int/49-2/observation/type/IWXXM/1.0/MeteorologicalAerodromeForecast" xlink:title="Aerodrome Forecast"/>
+      <om:phenomenonTime>
+        <gml:TimePeriod gml:id="tp-1-LZIB-101400Z-101700Z">
+          <gml:beginPosition>2016-10-10T14:00:00Z</gml:beginPosition>
+          <gml:endPosition>2016-10-10T17:00:00Z</gml:endPosition>
+        </gml:TimePeriod>
+      </om:phenomenonTime>
+      <om:resultTime xlink:href="#ti-LZIB-20161010105800Z"/>
+      <om:validTime xlink:href="#tp-LZIB-101200Z-111200Z"/>
+      <om:procedure xlink:href="#p-49-2-taf-LZIB" xlink:title="WMO 49-2 TAF"/>
+      <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/MeteorologicalAerodromeForecast" xlink:title="TAF forecast properties"/>
+      <om:featureOfInterest xlink:href="#sp-LZIB"/>
+      <om:result>
+        <iwxxm:MeteorologicalAerodromeForecastRecord changeIndicator="BECOMING" cloudAndVisibilityOK="false" gml:id="change-record-1-LZIB-20161010105800Z">
+          <iwxxm:surfaceWind>
+            <iwxxm:AerodromeSurfaceWindForecast variableWindDirection="false">
+              <iwxxm:meanWindDirection uom="deg">180</iwxxm:meanWindDirection>
+              <iwxxm:meanWindSpeed uom="[kn_i]">12</iwxxm:meanWindSpeed>
+            </iwxxm:AerodromeSurfaceWindForecast>
+          </iwxxm:surfaceWind>
+        </iwxxm:MeteorologicalAerodromeForecastRecord>
+      </om:result>
+    </om:OM_Observation>
+  </iwxxm:changeForecast>
+  <iwxxm:changeForecast>
+    <om:OM_Observation gml:id="cf-2-LZIB">
+      <om:type xlink:href="http://codes.wmo.int/49-2/observation/type/IWXXM/1.0/MeteorologicalAerodromeForecast" xlink:title="Aerodrome Forecast"/>
+      <om:phenomenonTime>
+        <gml:TimePeriod gml:id="tp-2-LZIB-110400Z-110700Z">
+          <gml:beginPosition>2016-10-11T04:00:00Z</gml:beginPosition>
+          <gml:endPosition>2016-10-11T07:00:00Z</gml:endPosition>
+        </gml:TimePeriod>
+      </om:phenomenonTime>
+      <om:resultTime xlink:href="#ti-LZIB-20161010105800Z"/>
+      <om:validTime xlink:href="#tp-LZIB-101200Z-111200Z"/>
+      <om:procedure xlink:href="#p-49-2-taf-LZIB" xlink:title="WMO 49-2 TAF"/>
+      <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/MeteorologicalAerodromeForecast" xlink:title="TAF forecast properties"/>
+      <om:featureOfInterest xlink:href="#sp-LZIB"/>
+      <om:result>
+        <iwxxm:MeteorologicalAerodromeForecastRecord changeIndicator="BECOMING" cloudAndVisibilityOK="false" gml:id="change-record-2-LZIB-20161010105800Z">
+          <iwxxm:prevailingVisibility uom="m">7000</iwxxm:prevailingVisibility>
+          <iwxxm:surfaceWind>
+            <iwxxm:AerodromeSurfaceWindForecast variableWindDirection="false">
+              <iwxxm:meanWindDirection uom="deg">140</iwxxm:meanWindDirection>
+              <iwxxm:meanWindSpeed uom="[kn_i]">22</iwxxm:meanWindSpeed>
+            </iwxxm:AerodromeSurfaceWindForecast>
+          </iwxxm:surfaceWind>
+          <iwxxm:weather xlink:href="http://codes.wmo.int/306/4678/RADZ"/>
+          <iwxxm:cloud>
+            <iwxxm:AerodromeCloudForecast gml:id="acf-2-LZIB">
+              <iwxxm:layer>
+                <iwxxm:CloudLayer>
+                  <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/2"/>
+                  <iwxxm:base uom="[ft_i]">1000</iwxxm:base>
+                </iwxxm:CloudLayer>
+              </iwxxm:layer>
+              <iwxxm:layer>
+                <iwxxm:CloudLayer>
+                  <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/3"/>
+                  <iwxxm:base uom="[ft_i]">1500</iwxxm:base>
+                </iwxxm:CloudLayer>
+              </iwxxm:layer>
+              <iwxxm:layer>
+                <iwxxm:CloudLayer>
+                  <iwxxm:amount xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-008/4"/>
+                  <iwxxm:base uom="[ft_i]">2500</iwxxm:base>
+                </iwxxm:CloudLayer>
+              </iwxxm:layer>
+            </iwxxm:AerodromeCloudForecast>
+          </iwxxm:cloud>
+        </iwxxm:MeteorologicalAerodromeForecastRecord>
+      </om:result>
+    </om:OM_Observation>
+  </iwxxm:changeForecast>
+</iwxxm:TAF>

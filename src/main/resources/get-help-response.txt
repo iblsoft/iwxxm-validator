@@ -1,0 +1,65 @@
+
+IBL IWXXM Validator JSON-RPC web service
+========================================
+
+Input request
+-------------
+
+requestVersion: version of message request, now must be set to "1.0".
+iwxxmVersion: version of validated IWXXM data, if omitted, than version is detected from IWXXM namespace
+iwxxmData: validated IWXXM data
+
+{
+ "jsonrpc": "2.0",
+ "id": "iwxxm1",
+ "method": "validate",
+ "params": {
+    "request": {
+    "requestVersion": "1.0",
+    "iwxxmVersion": "2.0",
+    "iwxxmData": "<content of validates IWXXM XML message>"
+    }
+}
+
+Output response
+---------------
+
+responseVersion: version of response message, now always 1.0
+valid: true or false, indicates if validated message is valid or not
+validationErrors: list of validation errors if report is not valid. If report is valid, than this property is omitted
+
+Example of response for valid IWXXM report
+{
+  "jsonrpc": "2.0",
+  "id": "iwxxm1",
+  "result": {
+    "responseVersion": "1.0",
+    "valid": true
+  }
+}
+
+Example of response for invalid IWXXM report
+{
+  "jsonrpc": "2.0",
+  "id": "iwxxm1",
+  "result": {
+    "validationErrors": [
+    {
+      "errorMessage": "cvc-complex-type.4: Attribute 'permissibleUsage' must appear on element 'iwxxm:SIGMET'.",
+      "lineNumber": 1,
+      "columnNumber": 1108
+     },
+    {
+      "errorMessage": "cvc-complex-type.4: Attribute 'uom' must appear on element 'iwxxm:directionOfMotion'.",
+      "lineNumber": 1,
+      "columnNumber": 4399
+     },
+     {
+       "errorMessage": "SIGMET.EMC1: directionOfMotion shall be reported in degrees (deg). ((if(exists(iwxxm:directionOfMotion) and (not(exists(iwxxm:directionOfMotion/@xsi:nil)) or iwxxm:directionOfMotion/@xsi:nil != 'true')) then (iwxxm:directionOfMotion/@uom = 'deg') else true()))"
+     }
+   ],
+   "responseVersion": "1.0",
+   "valid": false
+  }
+}
+

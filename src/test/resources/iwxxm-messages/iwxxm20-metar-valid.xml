@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iwxxm:METAR xmlns:iwxxm="http://icao.int/iwxxm/2.0" xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns:metce="http://def.wmo.int/metce/2013" xmlns:om="http://www.opengis.net/om/2.0" xmlns:sf="http://www.opengis.net/sampling/2.0" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://icao.int/iwxxm/2.0 http://schemas.wmo.int/iwxxm/2.0/iwxxm.xsd http://www.aixm.aero/schema/5.1.1 http://www.aixm.aero/schema/5.1.1_profiles/AIXM_WX/5.1.1a/AIXM_Features.xsd http://def.wmo.int/metce/2013 http://schemas.wmo.int/metce/1.2/metce.xsd http://www.opengis.net/om/2.0 http://schemas.opengis.net/om/2.0/observation.xsd http://www.opengis.net/sampling/2.0 http://schemas.opengis.net/sampling/2.0/samplingFeature.xsd http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd" gml:id="metar-LZIB-20161021163000Z" permissibleUsage="OPERATIONAL" status="NORMAL" automatedStation="false" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <iwxxm:observation>
+    <om:OM_Observation gml:id="obs-LZIB-20161021163000Z">
+      <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/MeteorologicalAerodromeObservation"/>
+      <om:phenomenonTime>
+        <gml:TimeInstant gml:id="ti-LZIB-20161021163000Z">
+          <gml:timePosition>2016-10-21T16:30:00Z</gml:timePosition>
+        </gml:TimeInstant>
+      </om:phenomenonTime>
+      <om:resultTime xlink:href="#ti-LZIB-20161021163000Z"/>
+      <om:procedure>
+        <metce:Process gml:id="p-49-2-metar-LZIB">
+          <gml:description>WMO No. 49 Volume 2 Meteorological Service for International Air Navigation APPENDIX 3 TECHNICAL SPECIFICATIONS RELATED TO METEOROLOGICAL OBSERVATIONS AND REPORTS</gml:description>
+        </metce:Process>
+      </om:procedure>
+      <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/MeteorologicalAerodromeObservation" xlink:title="Observed properties for Meteorological Aerodrome Observation Reports (METAR and SPECI)"/>
+      <om:featureOfInterest>
+        <sams:SF_SpatialSamplingFeature gml:id="sp-LZIB">
+          <sf:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint"/>
+          <sf:sampledFeature>
+            <aixm:AirportHeliport gml:id="uuid.38b89d76-95d2-11e6-b854-6e9b7e00d87a">
+              <aixm:timeSlice>
+                <aixm:AirportHeliportTimeSlice gml:id="uuid.38c17afe-95d2-11e6-b854-6e9b7e00d87a">
+                  <gml:validTime/>
+                  <aixm:interpretation>BASELINE</aixm:interpretation>
+                  <aixm:designator>LZIB</aixm:designator>
+                  <aixm:name>BRATISLAVA LETISKO</aixm:name>
+                  <aixm:locationIndicatorICAO>LZIB</aixm:locationIndicatorICAO>
+                </aixm:AirportHeliportTimeSlice>
+              </aixm:timeSlice>
+            </aixm:AirportHeliport>
+          </sf:sampledFeature>
+          <sams:shape>
+            <gml:Point gml:id="obs-point-LZIB" uomLabels="deg deg m" axisLabels="Lat Lon Altitude" srsDimension="3" srsName="http://www.opengis.net/def/crs/EPSG/0/4979">
+              <gml:pos>48.17 17.21 133</gml:pos>
+            </gml:Point>
+          </sams:shape>
+        </sams:SF_SpatialSamplingFeature>
+      </om:featureOfInterest>
+      <om:result>
+        <iwxxm:MeteorologicalAerodromeObservationRecord gml:id="obs-record-LZIB-20161021163000Z" cloudAndVisibilityOK="true">
+          <iwxxm:airTemperature uom="Cel">26</iwxxm:airTemperature>
+          <iwxxm:dewpointTemperature uom="Cel">15</iwxxm:dewpointTemperature>
+          <iwxxm:qnh uom="hPa">1022</iwxxm:qnh>
+          <iwxxm:surfaceWind>
+            <iwxxm:AerodromeSurfaceWind variableWindDirection="false">
+              <iwxxm:meanWindDirection uom="deg">80</iwxxm:meanWindDirection>
+              <iwxxm:meanWindSpeed uom="[kn_i]">5</iwxxm:meanWindSpeed>
+              <iwxxm:extremeClockwiseWindDirection uom="deg">60</iwxxm:extremeClockwiseWindDirection>
+              <iwxxm:extremeCounterClockwiseWindDirection uom="deg">120</iwxxm:extremeCounterClockwiseWindDirection>
+            </iwxxm:AerodromeSurfaceWind>
+          </iwxxm:surfaceWind>
+        </iwxxm:MeteorologicalAerodromeObservationRecord>
+      </om:result>
+    </om:OM_Observation>
+  </iwxxm:observation>
+  <iwxxm:trendForecast>
+    <om:OM_Observation gml:id="trend-fcst-LZIB-0">
+      <om:type xlink:href="http://codes.wmo.int/49-2/observation-type/IWXXM/1.0/MeteorologicalAerodromeTrendForecast"/>
+      <om:phenomenonTime>
+        <gml:TimePeriod gml:id="tp-0-LZIB-20161021163000Z-20161021183000Z">
+          <gml:beginPosition>2016-10-21T16:30:00Z</gml:beginPosition>
+          <gml:endPosition>2016-10-21T18:30:00Z</gml:endPosition>
+        </gml:TimePeriod>
+      </om:phenomenonTime>
+      <om:resultTime xlink:href="#ti-20161021163000Z"/>
+      <om:procedure xlink:href="#p-49-2-metar-LZIB" xlink:title="WMO 49-2 METAR procedure"/>
+      <om:observedProperty xlink:href="http://codes.wmo.int/49-2/observable-property/MeteorologicalAerodromeTrendForecast" xlink:title="METAR trend forecast properties"/>
+      <om:featureOfInterest xlink:href="#sp-LZIB"/>
+      <om:result>
+        <iwxxm:MeteorologicalAerodromeTrendForecastRecord gml:id="trend-fcst-record-LZIB-0-20161021163000Z-20161021183000Z" changeIndicator="NO_SIGNIFICANT_CHANGES"/>
+      </om:result>
+    </om:OM_Observation>
+  </iwxxm:trendForecast>
+</iwxxm:METAR>

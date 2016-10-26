@@ -1,0 +1,99 @@
+
+IBL IWXXM Validator
+===================
+
+NOTICE
+------
+
+The IWXXM Validator source code contains modified source code based on the following contribution:
+
+Command-line Refuter of Unshapely XML (CRUX)
+Copyright © 2016 University Corporation for Atmospheric Research (UCAR). All rights reserved.,
+The BSD 3-Clause License
+
+https://github.com/NCAR/crux
+https://github.com/NCAR/crux/blob/master/LICENSE
+
+The following files are based on CRUX source code:
+    validator/SchematronValidator.java,
+    validator/ValidationError.java
+    validator/XML10Validator.java
+    validator/XmlCalatogResolver.java
+    validator/IwxxmValidator.java
+
+--------------------------
+
+The IWXXM Validator source code contains the following contributions as unmodified dependencies:
+
+Guava, Copyright (C) 2009 The Guava Authors
+Apache License Version 2.0
+https://github.com/google/guava
+
+Apache Commons IO, Copyright 2002-2012 The Apache Software Foundation
+Apache License Version 2.0
+http://commons.apache.org/proper/commons-io/
+
+Apache Commons CLI, Copyright 2001-2015 The Apache Software Foundation
+Apache License Version 2.0
+https://commons.apache.org/proper/commons-cli/
+
+OWNER, Copyright (c) 2012-2015, Luigi R. Viggian
+The BSD 3-Clause License
+http://owner.aeonbits.org/
+
+Apache Ant, Copyright © 1999-2016 Apache Software Foundation
+Apache License Version 2.0
+http://ant.apache.org
+
+Logback, Copyright (C) 1999-2015, QOS.ch
+Lesser General Public License version 2.1
+https://github.com/qos-ch/logback
+
+Jetty Web Container, Copyright 1995-2016 Mort Bay Consulting Pty Ltd.
+Apache License Version 2.0
+http://www.eclipse.org/jetty/
+
+Xerces, Copyright © 1999-2012 Apache Software Foundation
+Apache License Version 2.0
+https://xerces.apache.org/index.html
+
+XML Resolver, Copyright © 2001-2009 Apache Software Foundation
+Apache License Version 2.0
+http://xerces.apache.org/xml-commons/components/resolver/
+
+Saxon HE, Copyright © 2015 Saxonica Limited
+Mozilla Public License Version 2.0
+http://www.saxonica.com/
+
+ISO Schematron XSLT, Copyright © 2000,2001 Rick Jelliffe and Academia Sinica Computing Center
+http://www.ascc.net/xml/resource/schematron/schematron.html
+
+FasterXML Jackson, Copyright ©2009 FasterXML, LLC
+Apache License Version 2.0
+https://github.com/FasterXML/jackson
+
+jsonrpc4j, Copyright (c) 2013 Brian
+The MIT License (MIT)
+https://github.com/briandilley/jsonrpc4j
+
+JUnit, Copyright © 2002-2016 JUnit
+Eclipse Public License - v 1.0
+http://junit.org/
+
+--------------------------
+
+XSD schemas of IWXXM and its dependencies are included as part of source code.
+For more information see http://schemas.wmo.int.
+
+AIXM, http://www.aixm.aero
+Copyright (c) 2016, EUROCONTROL & FAA
+BSD License, https://opensource.org/licenses/bsd-license.php
+
+GML Schemas
+Copyright (c) 2007,2010 Open Geospatial Consortium.
+To obtain additional rights of use, visit http://www.opengeospatial.org/legal/
+
+Observations and Measurements - XML Implementation is an OGC Standard.
+Copyright (c) [2010] Open Geospatial Consortium.
+To obtain additional rights of use, visit http://www.opengeospatial.org/legal/.
+

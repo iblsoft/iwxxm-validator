@@ -13,8 +13,8 @@ to [iwxxm-support@iblsoft.com](mailto:iwxxm-support@iblsoft.com). We are open to
 organisations and companies working on IWXXM implementation to increase interoperability across packages
 coming from different vendors. The features of the demo site are: 
 1. Validation with IWXXM 2.0, 2.0-RC1, 1.1, 1.0 schemas
-1. Conversion from TAC METAR, SPECI, SIGMET, AIRMET, VA Advisory to IWXXM 2.0 and 1.1
-1. Conversion back from IWXXM to TAC (with some limitations)
+2. Conversion from TAC METAR, SPECI, SIGMET, AIRMET, VA Advisory to IWXXM 2.0 and 1.1
+3. Conversion back from IWXXM to TAC (with some limitations)
 
 Requirements
 ------------
@@ -189,7 +189,7 @@ Configuration of web service
 ----------------------------
 
 Default web service configuration can be changed in the file `config/iwxxm-webservice-config.properties`.
-Location of this configuration file can be change by setting JVM property `-DconfigDir=<path_to_directory_with_config_file>`.
+Location of this configuration file can be changed by setting JVM property `-DconfigDir=<path_to_directory_with_config_file>`.
 
 
 

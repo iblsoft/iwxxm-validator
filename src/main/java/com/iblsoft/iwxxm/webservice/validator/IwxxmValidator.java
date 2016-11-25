@@ -26,6 +26,7 @@
 
 package com.iblsoft.iwxxm.webservice.validator;
 
+import com.google.common.base.VerifyException;
 import com.iblsoft.iwxxm.webservice.util.Log;
 import org.apache.commons.io.filefilter.WildcardFileFilter;
 
@@ -95,8 +96,10 @@ public class IwxxmValidator {
                     errors.addAll(schematronValidationResult.getValidationErrors());
                 }
             }
-        } catch (Exception e) {
+        } catch (VerifyException e) {
             errors.add(new ValidationError(e.getMessage(), "", 0, 0));
+        } catch (Exception e) {
+            errors.add(new ValidationError(e.toString(), "", 0, 0));
         }
 
         return new ValidationResult(iwxxmVersion, errors);

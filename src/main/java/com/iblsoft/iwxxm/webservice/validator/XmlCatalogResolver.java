@@ -26,6 +26,8 @@
 
 package com.iblsoft.iwxxm.webservice.validator;
 
+import com.google.common.base.Verify;
+import com.google.common.base.VerifyException;
 import com.iblsoft.iwxxm.webservice.util.Log;
 import org.apache.xerces.impl.xs.XSDDescription;
 import org.apache.xerces.xni.XMLResourceIdentifier;
@@ -68,11 +70,12 @@ class XmlCatalogResolver extends org.apache.xerces.util.XMLCatalogResolver {
             expandedSystemId = xmlResourceIdentifier.getExpandedSystemId();
         }
 
+        Verify.verifyNotNull(expandedSystemId, "Identifier %s is not resolved, check if xsi:schemaLocation and xmlns:xsi attributes are correctly defined.", desc.getNamespace());
         if (!expandedSystemId.startsWith("file:")) {
-            Log.INSTANCE.warn("Identifier {} is not resolved to local path (resolved to {})", desc.getLiteralSystemId(), expandedSystemId);
+            Log.INSTANCE.warn("Identifier {} is not resolved to local path (resolved to {})", desc.getTargetNamespace(), expandedSystemId);
             if (!allowRemoteResources) {
-                throw new IllegalStateException(String.format("Identifier %s is not resolved to local path (resolved to %s). Only resources stored in local catalog are enbaled.",
-                        desc.getLiteralSystemId(), expandedSystemId));
+                throw new VerifyException(String.format("Identifier %s is not resolved to local path (resolved to %s). Only resources stored in local catalog are enbaled.",
+                        desc.getNamespace(), expandedSystemId));
             }
         }
 

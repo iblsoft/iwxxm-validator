@@ -78,4 +78,41 @@ public class IwxxmWebServiceTest
             assertThat(response.isValid(), is(false));
         }
     }
+
+    @Test
+    public void validate_with_messages_with_invalid_xsi_schema_should_report_errors() throws Exception
+    {
+        String[] iwxxmMessageFileNames = new String[]{
+                "iwxxm20-metar-invalid-xsi-schema.xml",
+                "iwxxm20-metar-without_schemaLocation.xml",
+                "iwxxm20-metar-invalid-schemaLocation.xml"};
+
+        List<String> testMessages = TestUtils.loadTestResources(iwxxmMessageFileNames);
+        for (String iwxxmReport: testMessages) {
+            ValidationRequest request = new ValidationRequest();
+            request.setRequestVersion("1.0");
+            request.setIwxxmData(iwxxmReport);
+            ValidationResponse response = this.ws.validate(request);
+            assertThat(response.isValid(), is(false));
+            assertThat(response.getValidationErrors().size(), is(1));
+            assertThat(response.getValidationErrors().get(0).getErrorMessage().contains("check if xsi:schemaLocation and xmlns:xsi attributes are correctly defined"), is(true));
+        }
+    }
+
+    @Test
+    public void validate_with_messages_with_non_local_xsd_should_report_errors() throws Exception
+    {
+        String[] iwxxmMessageFileNames = new String[]{"iwxxm20-metar-with-non-local-xsd.xml"};
+
+        List<String> testMessages = TestUtils.loadTestResources(iwxxmMessageFileNames);
+        for (String iwxxmReport: testMessages) {
+            ValidationRequest request = new ValidationRequest();
+            request.setRequestVersion("1.0");
+            request.setIwxxmData(iwxxmReport);
+            ValidationResponse response = this.ws.validate(request);
+            assertThat(response.isValid(), is(false));
+            assertThat(response.getValidationErrors().size(), is(1));
+            assertThat(response.getValidationErrors().get(0).getErrorMessage().contains("Identifier http://icao.int/iwxxm/2.0 is not resolved to local path"), is(true));
+        }
+    }
 }

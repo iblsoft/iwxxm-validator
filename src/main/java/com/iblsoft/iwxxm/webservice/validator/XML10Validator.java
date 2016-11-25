@@ -122,7 +122,7 @@ class XML10Validator {
         }
 
         private ValidationError translateException(SAXParseException exception) {
-            return new ValidationError(exception.getMessage(), "", exception.getLineNumber(), exception.getColumnNumber());
+            return new ValidationError(exception.toString(), "", exception.getLineNumber(), exception.getColumnNumber());
         }
     }
 }

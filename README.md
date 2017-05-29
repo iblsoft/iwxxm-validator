@@ -13,7 +13,7 @@ to [iwxxm-support@iblsoft.com](mailto:iwxxm-support@iblsoft.com). We are open to
 organisations and companies working on IWXXM implementation to increase interoperability across packages
 coming from different vendors. The features of the demo site are:
 
-1. Validation with IWXXM 2.0, 2.0-RC1, 1.1, 1.0 schemas
+1. Validation with IWXXM 2.1, 2.0, 2.0-RC1, 1.1, 1.0 schemas
 2. Conversion from TAC METAR, SPECI, SIGMET, AIRMET, VA Advisory to IWXXM 2.0 and 1.1
 3. Conversion back from IWXXM to TAC (with some limitations)
 
@@ -184,7 +184,15 @@ Updating XML Schema catalog
 To prevent download of XSD schemas from the network, XML Schema catalog is stored 
 on the local disk in the directory `config/schemas`. Content of XML schema catalog 
 (together with schematron rules) is extracted from ZIP file downloaded from 
-<http://schemas.wmo.int/iwxxm/2.0/zip/iwxxm-schema-bundle-2.0.zip>.
+<http://schemas.wmo.int/iwxxm/2.1/zip/iwxxm-schema-bundle-2.1.zip>.
+
+Note: in the IWXXM version 2.0, there is a problem with original iwxxm-collect.sch file - 
+it uses sch:include elements to include iwxxm.sch and collect.sch from iwxxm 1.2. 
+Using of sch:include is not supported by schematron validation rules. Our validator 
+runs schematron validation against every .sch file placed in the rule directory 
+(for appropriate version of iwxxm). As a workaround for problem with includes, original 
+iwxxm-collect.sch file was renamed to iwxxm-collect.sch.txt and collect.sch file from 1.2 
+IWXXM schematron rules was copied also into 2.0 rule directory. 
 
 Configuration of web service
 ----------------------------

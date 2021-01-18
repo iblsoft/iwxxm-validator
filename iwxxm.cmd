@@ -1,1 +1,1 @@
-java -jar bin/ibl-iwxxm-utils.jar -Djava.net.preferIPv4Stack=true %*
+java -Djava.net.preferIPv4Stack=true -jar bin\ibl-iwxxm-utils.jar %*
